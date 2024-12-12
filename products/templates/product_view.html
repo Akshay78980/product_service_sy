@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Products View{% endblock %}
+
+{% block content %}
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card" style="max-height: 500px; overflow: hidden;">
+                    <img id="productImage" src="" alt="Product Image" class="card-img-top img-fluid" style="max-height: 100%; object-fit: cover;">
+                </div>
+                <div id="availableStocksDiv" class="m-2" style="font-weight: bold;"></div>
+            </div>
+            <div class="col-md-7">
+                <h2 id="productName" class="mb-3">Product Name</h2>
+                <h4 id="productPrice" class="text-success mb-4">Rs. 0.00</h4>
+                <p id="productDescription" class="mb-3">Product description goes here...</p>
+                <div id="sizesAvailable" class="mb-3">
+                
+                </div>
+                <button class="btn btn-warning btn-lg">Buy Now</button>
+                <button class="btn btn-light btn-lg">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js\product_view.js' %}"></script>
+{% endblock %}
